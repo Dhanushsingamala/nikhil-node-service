@@ -1,0 +1,14 @@
+site_name: nikhil-rest-apiservice
+site_description: dhanush is creating a new node service
+
+repo_url: https://github.com/Dhanushsingamala/nikhil-node-service
+edit_uri: edit/main/docs/
+
+nav:
+  - Overview: index.md
+  - API: api.md
+
+# techdocs-core supplies the theme and the markdown extension set Backstage
+# TechDocs expects, so no extra markdown_extensions are declared here.
+plugins:
+  - techdocs-core

@@ -1,0 +1,42 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: nikhil-rest-apiservice
+  title: nikhil-rest-apiservice
+  description: dhanush is creating a new node service
+  annotations:
+    github.com/project-slug: Dhanushsingamala/nikhil-node-service
+    backstage.io/techdocs-ref: dir:.
+  tags:
+    - nodejs
+    - express
+    - rest
+spec:
+  type: service
+  lifecycle: production
+  owner: group:default/developers
+  system: system:default/teamomf-platform
+  providesApis:
+    - nikhil-rest-apiservice-api
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: nikhil-rest-apiservice-api
+  title: nikhil-rest-apiservice API
+  description: dhanush is creating a new node service
+  annotations:
+    github.com/project-slug: Dhanushsingamala/nikhil-node-service
+  tags:
+    - rest
+    - openapi
+spec:
+  type: openapi
+  lifecycle: production
+  owner: group:default/developers
+  system: system:default/teamomf-platform
+  # Pulled from the real openapi.yaml in this repository rather than
+  # duplicated here, so the catalog can never drift from the shipped contract.
+  definition:
+    $text: ./openapi.yaml
